@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "rg" {
   #name     = "${local.resource_name_prefix}-${var.resource_group_name}" 
   # For Practice purpose as we will create the same kind of resource again and again ,we need to add
   # random varibales
-  name     = "${local.resource_name_prefix}-${var.resource_group_name}-${random_string.myrandom}"
+  name     = "${local.resource_name_prefix}-${var.resource_group_name}-${random_string.myrandom.id}"
   location = var.resource_group_location
   tags     = local.comman_tags
 
